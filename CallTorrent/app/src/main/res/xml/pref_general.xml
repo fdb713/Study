@@ -3,7 +3,7 @@
 <CheckBoxPreference
     android:defaultValue="false"
     android:key="AutoAnswer"
-    android:textSize="48sp"
+    android:textSize="24sp"
     android:title="是否自动接听？" />
 <CheckBoxPreference
     android:defaultValue="true"
