@@ -1,16 +1,7 @@
 package com.lucent.cl.calltorrent;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.telephony.SmsMessage;
 import android.util.Log;
-
-import java.net.URISyntaxException;
 
 
 public class SendMailTask extends AsyncTask<String, Integer, Boolean> {

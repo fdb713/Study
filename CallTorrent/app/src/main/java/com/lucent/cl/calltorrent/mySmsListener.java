@@ -27,21 +27,21 @@ public class mySmsListener extends BroadcastReceiver {
             String imapPassword = sharedPref.getString("SMTPpswd", "");
             String myPhoneNo = sharedPref.getString("myPhoneNumber", "");
             String toAddress = sharedPref.getString("toAddress", "");
+            String sender = new String();
+            StringBuffer content = new StringBuffer();
             for (Object pdu : pdus) {
                 byte[] data = (byte[]) pdu;
                 final int sdk = Build.VERSION.SDK_INT;
-                Log.d(LOG_TAG, "sdk is" + Build.VERSION.SDK_INT);
                 SmsMessage message;
                 if (sdk < Build.VERSION_CODES.M) {
                     message = SmsMessage.createFromPdu(data);
                 } else {
                     message = SmsMessage.createFromPdu(data, intent.getStringExtra("format"));
                 }
-
-                String sender = message.getOriginatingAddress();// 获取短信的发送者
-                String content = message.getMessageBody();// 获取短信的内容
-                new SendMailTask().execute(sender, imapServer, imapUser, imapPassword, myPhoneNo, toAddress, content);
+                sender = message.getOriginatingAddress();  // 获取短信的发送者
+                content.append(message.getMessageBody());  // 获取短信的内容
             }
+            new SendMailTask().execute(sender, imapServer, imapUser, imapPassword, myPhoneNo, toAddress, content.toString());
         }
     }
 }
