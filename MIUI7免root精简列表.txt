@@ -1,6 +1,7 @@
 MIUI 7 免root 精简列表
 
 使用方法：adb shell之后把下列命令粘贴到命令行。可以一口气全贴进去，会一条一条的执行的。
+安全起见，操作之前一定要记得备份！万一失败，卡白MI了，要进入recovery 清用户数据：注意不要搞错了把内置SD卡给清了。
 
 
 pm block com.android.browser
@@ -51,3 +52,22 @@ pm block com.lbe.security.miui
 pm block com.miui.analytics
 
 pm block com.xiaomi.mitunes
+
+
+WIPE之后可以用下面这个命令把预装的App全部卸载
+pm uninstall cn.wps.moffice_eng
+pm uninstall com.xiaomi.shop
+pm uninstall com.baidu.input_miv6
+pm uninstall com.xiaomi.channel
+pm uninstall com.iflytek.speechcloud
+pm uninstall com.xiaomi.o2o
+pm uninstall com.baidu.BaiduMap
+pm uninstall com.xiaomi.jr
+pm uninstall com.miui.klo.bugreport
+pm uninstall com.ximalaya.ting.android
+pm uninstall com.duokan.reader
+pm uninstall com.dianping.v1
+pm uninstall com.tencent.mobileqq
+pm uninstall com.sina.weibo
+pm uninstall com.xiaomi.smarthome
+pm uninstall com.cleanmaster.mguard_cn
