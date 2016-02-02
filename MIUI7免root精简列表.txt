@@ -1,0 +1,53 @@
+MIUI 7 免root 精简列表
+
+使用方法：adb shell之后把下列命令粘贴到命令行。可以一口气全贴进去，会一条一条的执行的。
+
+
+pm block com.android.browser
+pm block com.android.browser.provider
+pm block com.android.galaxy4
+pm block com.android.magicsmoke
+pm block com.android.musicfx
+pm block com.android.musicvis
+pm block com.android.noisefield
+pm block com.android.phasebeam
+pm block com.android.printspooler
+pm block com.android.providers.applications
+pm block com.android.quicksearchbox
+pm block com.android.smspush
+pm block com.android.thememanager
+pm block com.android.wallpaper
+pm block com.android.wallpaper.holospiral
+pm block com.android.wallpaper.livepicker
+pm block com.baidu.map.location
+pm block com.cleanmaster.sdk
+pm block com.mfashiongallery.emag
+pm block com.milink.service
+pm block com.mipay.wallet
+pm block com.miui.barcodescanner
+pm block com.miui.cloudbackup
+pm block com.miui.cloudservice
+pm block com.miui.fm
+pm block com.miui.fmradio
+pm block com.miui.guardprovider
+pm block com.miui.mipub
+pm block com.miui.networkassistant
+pm block com.miui.notes
+pm block com.miui.player
+pm block com.miui.powerkeeper
+pm block com.miui.systemAdSolution
+pm block com.miui.video
+pm block com.miui.voiceassist
+pm block com.miui.voip
+pm block com.svox.pico
+pm block com.xiaomi.gamecenter
+pm block com.xiaomi.gamecenter.sdk.service
+pm block com.xiaomi.metok
+pm block com.xiaomi.midrop
+pm block com.xiaomi.pass
+pm block com.xiaomi.payment
+pm block com.xiaomi.payment
+pm block com.lbe.security.miui
+pm block com.miui.analytics
+
+pm block com.xiaomi.mitunes
