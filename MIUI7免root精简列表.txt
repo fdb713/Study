@@ -21,9 +21,7 @@ pm block com.android.wallpaper
 pm block com.android.wallpaper.holospiral
 pm block com.android.wallpaper.livepicker
 pm block com.baidu.map.location
-pm block com.cleanmaster.sdk
 pm block com.mfashiongallery.emag
-pm block com.milink.service
 pm block com.mipay.wallet
 pm block com.miui.barcodescanner
 pm block com.miui.cloudbackup
@@ -50,8 +48,6 @@ pm block com.xiaomi.payment
 pm block com.xiaomi.payment
 pm block com.lbe.security.miui
 pm block com.miui.analytics
-
-pm block com.xiaomi.mitunes
 
 
 WIPE之后可以用下面这个命令把预装的App全部卸载
