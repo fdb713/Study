@@ -1,69 +1,84 @@
-MIUI 7 免root 精简列表
+MIUI 7 免root 精简列表 ：android 4.4有效。5.1把block改成disable。 
 
 使用方法：adb shell之后把下列命令粘贴到命令行。可以一口气全贴进去，会一条一条的执行的。
 安全起见，操作之前一定要记得备份！万一失败，卡白MI了，要进入recovery 清用户数据：注意不要搞错了把内置SD卡给清了。
 
 
-pm block com.android.browser
-pm block com.android.browser.provider
-pm block com.android.galaxy4
-pm block com.android.magicsmoke
-pm block com.android.musicfx
-pm block com.android.musicvis
-pm block com.android.noisefield
-pm block com.android.phasebeam
-pm block com.android.printspooler
-pm block com.android.providers.applications
-pm block com.android.quicksearchbox
-pm block com.android.smspush
-pm block com.android.thememanager
-pm block com.android.wallpaper
-pm block com.android.wallpaper.holospiral
-pm block com.android.wallpaper.livepicker
-pm block com.baidu.map.location
-pm block com.mfashiongallery.emag
-pm block com.mipay.wallet
-pm block com.miui.barcodescanner
-pm block com.miui.cloudbackup
-pm block com.miui.cloudservice
-pm block com.miui.fm
-pm block com.miui.fmradio
-pm block com.miui.guardprovider
-pm block com.miui.mipub
-pm block com.miui.networkassistant
-pm block com.miui.notes
-pm block com.miui.player
-pm block com.miui.powerkeeper
-pm block com.miui.systemAdSolution
-pm block com.miui.video
-pm block com.miui.voiceassist
-pm block com.miui.voip
-pm block com.svox.pico
-pm block com.xiaomi.gamecenter
-pm block com.xiaomi.gamecenter.sdk.service
-pm block com.xiaomi.metok
-pm block com.xiaomi.midrop
-pm block com.xiaomi.pass
-pm block com.xiaomi.payment
-pm block com.xiaomi.payment
-pm block com.lbe.security.miui
-pm block com.miui.analytics
+adb shell pm block com.android.browser
+adb shell pm block com.android.browser.provider
+adb shell pm block com.android.galaxy4
+adb shell pm block com.android.magicsmoke
+adb shell pm block com.android.musicfx
+adb shell pm block com.android.musicvis
+adb shell pm block com.android.noisefield
+adb shell pm block com.android.phasebeam
+adb shell pm block com.android.printspooler
+adb shell pm block com.android.providers.applications
+adb shell pm block com.android.quicksearchbox
+adb shell pm block com.android.smspush
+adb shell pm block com.android.thememanager
+adb shell pm block com.android.wallpaper
+adb shell pm block com.android.wallpaper.holospiral
+adb shell pm block com.android.wallpaper.livepicker
+adb shell pm block com.baidu.map.location
+adb shell pm block com.lbe.security.miui
+adb shell pm block com.mfashiongallery.emag
+adb shell pm block com.mipay.wallet
+adb shell pm block com.miui.analytics
+adb shell pm block com.miui.antispam
+adb shell pm block com.miui.backup
+adb shell pm block com.miui.barcodescanner
+adb shell pm block com.miui.bugreport
+adb shell pm block com.miui.cleanmaster
+adb shell pm block com.miui.cloudbackup
+adb shell pm block com.miui.cloudservice
+adb shell pm block com.miui.compass
+adb shell pm block com.miui.fm
+adb shell pm block com.miui.fmradio
+adb shell pm block com.miui.gallery
+adb shell pm block com.miui.guardprovider
+adb shell pm block com.miui.mipub
+adb shell pm block com.miui.miwallpaper
+adb shell pm block com.miui.miwallpaper
+adb shell pm block com.miui.networkassistant
+adb shell pm block com.miui.notes
+adb shell pm block com.miui.player
+adb shell pm block com.miui.powerkeeper
+adb shell pm block com.miui.providers.weather
+adb shell pm block com.miui.rom
+adb shell pm block com.miui.securityadd
+adb shell pm block com.miui.stepsprovider
+adb shell pm block com.miui.system
+adb shell pm block com.miui.systemAdSolution
+adb shell pm block com.miui.video
+adb shell pm block com.miui.voiceassist
+adb shell pm block com.miui.voip
+adb shell pm block com.miui.weather2
+adb shell pm block com.miui.whetstone
+adb shell pm block com.miui.yellowpage
+adb shell pm block com.svox.pico
+adb shell pm block com.xiaomi.account
+adb shell pm block com.xiaomi.finddevice
+adb shell pm block com.xiaomi.gamecenter
+adb shell pm block com.xiaomi.gamecenter.sdk.service
+adb shell pm block com.xiaomi.metok
+adb shell pm block com.xiaomi.midrop
+adb shell pm block com.xiaomi.pass
+adb shell pm block com.xiaomi.payment
+adb shell pm block com.xiaomi.vip
+adb shell pm block com.miui.core
+adb shell pm block com.android.calendar
 
 
-WIPE之后可以用下面这个命令把预装的App全部卸载
-pm uninstall cn.wps.moffice_eng
-pm uninstall com.xiaomi.shop
-pm uninstall com.baidu.input_miv6
-pm uninstall com.xiaomi.channel
-pm uninstall com.iflytek.speechcloud
-pm uninstall com.xiaomi.o2o
-pm uninstall com.baidu.BaiduMap
-pm uninstall com.xiaomi.jr
-pm uninstall com.miui.klo.bugreport
-pm uninstall com.ximalaya.ting.android
-pm uninstall com.duokan.reader
-pm uninstall com.dianping.v1
-pm uninstall com.tencent.mobileqq
-pm uninstall com.sina.weibo
-pm uninstall com.xiaomi.smarthome
-pm uninstall com.cleanmaster.mguard_cn
+下面这几个千万不能block
+com.miui.home
+com.miui.securitycenter
+com.xiaomi.market
+
+
+
+WIPE之后可以用下面这个命令把预装的App全部列出来
+adb shell pm list packages -3
+
+然后用下面的命令批量删除
+adb shell pm uninstall cn.wps.moffice_eng
