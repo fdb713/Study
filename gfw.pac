@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
-if (shExpMatch(host,"*.google.com")) {
-return "SOCKS5 192.168.1.12:3080";
-   }
+if (shExpMatch(url,"*.google.*")) {
+return "SOCKS 192.168.1.12:3080";
+}
  return "DIRECT"; 
 }
